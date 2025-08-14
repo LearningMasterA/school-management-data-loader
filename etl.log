@@ -1,0 +1,8 @@
+2025-08-14 20:54:19,039 - INFO - Starting ETL process...
+2025-08-14 20:54:19,039 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-14 20:55:15,467 - INFO - Starting ETL process...
+2025-08-14 20:55:15,467 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-14 20:55:15,942 - INFO - Inserted 2 rows into ss_t_schools
+2025-08-14 20:55:15,943 - INFO - Loading table: ss_t_grade from grades.xlsx
+2025-08-14 20:55:15,988 - INFO - Inserted 3 rows into ss_t_grade
+2025-08-14 20:55:15,988 - INFO - ETL process completed.
