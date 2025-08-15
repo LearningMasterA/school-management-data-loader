@@ -6,3 +6,239 @@
 2025-08-14 20:55:15,943 - INFO - Loading table: ss_t_grade from grades.xlsx
 2025-08-14 20:55:15,988 - INFO - Inserted 3 rows into ss_t_grade
 2025-08-14 20:55:15,988 - INFO - ETL process completed.
+2025-08-16 00:58:21,521 - INFO - Starting ETL process...
+2025-08-16 00:58:21,521 - INFO - Loading table: ss_t_attendance_type from attendance_type.xlsx
+2025-08-16 00:58:22,606 - ERROR - Error loading ss_t_attendance_type: 1146 (42S02): Table 'school_db.ss_t_attendance_type' doesn't exist
+2025-08-16 00:58:22,607 - INFO - Loading table: ss_t_attendance_register from attendance_register.xlsx
+2025-08-16 00:58:22,686 - ERROR - Error loading ss_t_attendance_register: 1146 (42S02): Table 'school_db.ss_t_students' doesn't exist
+2025-08-16 00:58:22,687 - INFO - Loading table: ss_t_class_diary from class_diary.xlsx
+2025-08-16 00:58:22,733 - ERROR - Error loading ss_t_class_diary: 1146 (42S02): Table 'school_db.ss_t_grades' doesn't exist
+2025-08-16 00:58:22,734 - INFO - Loading table: ss_t_class_timetable from class_timetable.xlsx
+2025-08-16 00:58:22,777 - ERROR - Error loading ss_t_class_timetable: 1146 (42S02): Table 'school_db.ss_t_schools' doesn't exist
+2025-08-16 00:58:22,777 - INFO - Loading table: ss_t_fee_payment_installment from fee_payment_installment.xlsx
+2025-08-16 00:58:22,814 - ERROR - Error loading ss_t_fee_payment_installment: 1146 (42S02): Table 'school_db.ss_t_students' doesn't exist
+2025-08-16 00:58:22,815 - INFO - Loading table: ss_t_grades from grades.xlsx
+2025-08-16 00:58:22,853 - ERROR - Error loading ss_t_grades: 1146 (42S02): Table 'school_db.ss_t_schools' doesn't exist
+2025-08-16 00:58:22,854 - INFO - Loading table: ss_t_homework from homework.xlsx
+2025-08-16 00:58:22,887 - ERROR - Error loading ss_t_homework: 1146 (42S02): Table 'school_db.ss_t_schools' doesn't exist
+2025-08-16 00:58:22,887 - INFO - Loading table: ss_t_lesson_plan from lesson_plan.xlsx
+2025-08-16 00:58:22,925 - ERROR - Error loading ss_t_lesson_plan: 1146 (42S02): Table 'school_db.ss_t_teachers' doesn't exist
+2025-08-16 00:58:22,927 - INFO - Loading table: ss_t_lesson_plan_topic_map from lesson_plan_topic_map.xlsx
+2025-08-16 00:58:22,963 - ERROR - Error loading ss_t_lesson_plan_topic_map: 1146 (42S02): Table 'school_db.ss_t_lesson_plan' doesn't exist
+2025-08-16 00:58:22,963 - INFO - Loading table: ss_t_school_income from school_income.xlsx
+2025-08-16 00:58:22,997 - ERROR - Error loading ss_t_school_income: 1146 (42S02): Table 'school_db.ss_t_schools' doesn't exist
+2025-08-16 00:58:22,998 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-16 01:13:17,401 - INFO - Starting ETL process...
+2025-08-16 01:13:17,402 - INFO - Loading table: ss_t_attendance_type from attendance_type.xlsx
+2025-08-16 01:13:18,091 - INFO - Inserted 3 rows into ss_t_attendance_type
+2025-08-16 01:13:18,093 - INFO - Loading table: ss_t_attendance_register from attendance_register.xlsx
+2025-08-16 01:13:18,140 - ERROR - Error loading ss_t_attendance_register: Invalid FK values in 'student_id': {1, 2, 3}
+2025-08-16 01:13:18,141 - INFO - Loading table: ss_t_class_diary from class_diary.xlsx
+2025-08-16 01:13:18,180 - ERROR - Error loading ss_t_class_diary: 1146 (42S02): Table 'school_db.ss_t_grades' doesn't exist
+2025-08-16 01:13:18,181 - INFO - Loading table: ss_t_class_timetable from class_timetable.xlsx
+2025-08-16 01:13:18,210 - ERROR - Error loading ss_t_class_timetable: Invalid FK values in 'school_id': {1}
+2025-08-16 01:13:18,211 - INFO - Loading table: ss_t_fee_payment_installment from fee_payment_installment.xlsx
+2025-08-16 01:13:18,236 - ERROR - Error loading ss_t_fee_payment_installment: Invalid FK values in 'student_id': {1, 2}
+2025-08-16 01:13:18,237 - INFO - Loading table: ss_t_grades from grades.xlsx
+2025-08-16 01:13:18,262 - ERROR - Error loading ss_t_grades: Invalid FK values in 'school_id': {1}
+2025-08-16 01:13:18,263 - INFO - Loading table: ss_t_homework from homework.xlsx
+2025-08-16 01:13:18,286 - ERROR - Error loading ss_t_homework: Invalid FK values in 'school_id': {1}
+2025-08-16 01:13:18,287 - INFO - Loading table: ss_t_lesson_plan from lesson_plan.xlsx
+2025-08-16 01:13:18,311 - ERROR - Error loading ss_t_lesson_plan: Invalid FK values in 'teacher_id': {1, 2}
+2025-08-16 01:13:18,312 - INFO - Loading table: ss_t_lesson_plan_topic_map from lesson_plan_topic_map.xlsx
+2025-08-16 01:13:18,336 - ERROR - Error loading ss_t_lesson_plan_topic_map: 1146 (42S02): Table 'school_db.ss_t_lesson_plan' doesn't exist
+2025-08-16 01:13:18,337 - INFO - Loading table: ss_t_school_income from school_income.xlsx
+2025-08-16 01:13:18,361 - ERROR - Error loading ss_t_school_income: Invalid FK values in 'school_id': {1}
+2025-08-16 01:13:18,362 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-16 01:15:03,276 - INFO - Starting ETL process...
+2025-08-16 01:15:03,276 - INFO - Loading table: ss_t_attendance_type from attendance_type.xlsx
+2025-08-16 01:15:03,920 - ERROR - Error loading ss_t_attendance_type: 1062 (23000): Duplicate entry '1' for key 'ss_t_attendance_type.PRIMARY'
+2025-08-16 01:15:03,921 - INFO - Loading table: ss_t_attendance_register from attendance_register.xlsx
+2025-08-16 01:15:03,956 - ERROR - Error loading ss_t_attendance_register: Invalid FK values in 'student_id': {1, 2, 3}
+2025-08-16 01:15:03,957 - INFO - Loading table: ss_t_class_diary from class_diary.xlsx
+2025-08-16 01:15:03,995 - ERROR - Error loading ss_t_class_diary: 1146 (42S02): Table 'school_db.ss_t_grades' doesn't exist
+2025-08-16 01:15:03,996 - INFO - Loading table: ss_t_class_timetable from class_timetable.xlsx
+2025-08-16 01:15:04,024 - ERROR - Error loading ss_t_class_timetable: Invalid FK values in 'school_id': {1}
+2025-08-16 01:15:04,025 - INFO - Loading table: ss_t_fee_payment_installment from fee_payment_installment.xlsx
+2025-08-16 01:15:04,052 - ERROR - Error loading ss_t_fee_payment_installment: Invalid FK values in 'student_id': {1, 2}
+2025-08-16 01:15:04,052 - INFO - Loading table: ss_t_grades from grades.xlsx
+2025-08-16 01:15:04,080 - ERROR - Error loading ss_t_grades: Invalid FK values in 'school_id': {1}
+2025-08-16 01:15:04,081 - INFO - Loading table: ss_t_homework from homework.xlsx
+2025-08-16 01:15:04,114 - ERROR - Error loading ss_t_homework: Invalid FK values in 'school_id': {1}
+2025-08-16 01:15:04,116 - INFO - Loading table: ss_t_lesson_plan from lesson_plan.xlsx
+2025-08-16 01:15:04,146 - ERROR - Error loading ss_t_lesson_plan: Invalid FK values in 'teacher_id': {1, 2}
+2025-08-16 01:15:04,146 - INFO - Loading table: ss_t_lesson_plan_topic_map from lesson_plan_topic_map.xlsx
+2025-08-16 01:15:04,173 - ERROR - Error loading ss_t_lesson_plan_topic_map: 1146 (42S02): Table 'school_db.ss_t_lesson_plan' doesn't exist
+2025-08-16 01:15:04,174 - INFO - Loading table: ss_t_school_income from school_income.xlsx
+2025-08-16 01:15:04,200 - ERROR - Error loading ss_t_school_income: Invalid FK values in 'school_id': {1}
+2025-08-16 01:15:04,201 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-16 01:20:11,326 - INFO - Starting ETL process...
+2025-08-16 01:20:11,327 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-16 01:21:12,715 - INFO - Starting ETL process...
+2025-08-16 01:21:12,716 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-16 01:21:13,391 - ERROR - Error loading ss_t_schools: 'school_id'
+2025-08-16 01:21:13,392 - INFO - Loading table: ss_t_grades from grades.xlsx
+2025-08-16 01:21:13,429 - ERROR - Error loading ss_t_grades: Invalid FK values in 'school_id': {1}
+2025-08-16 01:21:13,430 - INFO - Loading table: ss_t_sections from sections.xlsx
+2025-08-16 01:21:13,468 - ERROR - Error loading ss_t_sections: 1146 (42S02): Table 'school_db.ss_t_grades' doesn't exist
+2025-08-16 01:21:13,469 - INFO - Loading table: ss_t_subjects from subjects.xlsx
+2025-08-16 01:21:13,497 - ERROR - Error loading ss_t_subjects: Invalid FK values in 'school_id': {1}
+2025-08-16 01:21:13,498 - INFO - Loading table: ss_t_teachers from teachers.xlsx
+2025-08-16 01:21:13,530 - ERROR - Error loading ss_t_teachers: Invalid FK values in 'school_id': {1}
+2025-08-16 01:21:13,531 - INFO - Loading table: ss_t_students from students.xlsx
+2025-08-16 01:21:13,562 - ERROR - Error loading ss_t_students: Invalid FK values in 'school_id': {1}
+2025-08-16 01:21:13,563 - INFO - Loading table: ss_t_attendance_type from attendance_type.xlsx
+2025-08-16 01:21:13,591 - ERROR - Error loading ss_t_attendance_type: 1062 (23000): Duplicate entry '1' for key 'ss_t_attendance_type.PRIMARY'
+2025-08-16 01:21:13,592 - INFO - Loading table: ss_t_attendance_register from attendance_register.xlsx
+2025-08-16 01:21:13,619 - ERROR - Error loading ss_t_attendance_register: Invalid FK values in 'student_id': {1, 2, 3}
+2025-08-16 01:21:13,620 - INFO - Loading table: ss_t_class_diary from class_diary.xlsx
+2025-08-16 01:21:13,650 - ERROR - Error loading ss_t_class_diary: 1146 (42S02): Table 'school_db.ss_t_grades' doesn't exist
+2025-08-16 01:21:13,651 - INFO - Loading table: ss_t_class_timetable from class_timetable.xlsx
+2025-08-16 01:21:13,683 - ERROR - Error loading ss_t_class_timetable: Invalid FK values in 'school_id': {1}
+2025-08-16 01:21:13,684 - INFO - Loading table: ss_t_fee_payment_installment from fee_payment_installment.xlsx
+2025-08-16 01:21:13,712 - ERROR - Error loading ss_t_fee_payment_installment: Invalid FK values in 'student_id': {1, 2}
+2025-08-16 01:21:13,713 - INFO - Loading table: ss_t_homework from homework.xlsx
+2025-08-16 01:21:13,737 - ERROR - Error loading ss_t_homework: Invalid FK values in 'school_id': {1}
+2025-08-16 01:21:13,738 - INFO - Loading table: ss_t_lesson_plan from lesson_plan.xlsx
+2025-08-16 01:21:13,762 - ERROR - Error loading ss_t_lesson_plan: Invalid FK values in 'teacher_id': {1, 2}
+2025-08-16 01:21:13,763 - INFO - Loading table: ss_t_lesson_plan_topic_map from lesson_plan_topic_map.xlsx
+2025-08-16 01:21:13,801 - ERROR - Error loading ss_t_lesson_plan_topic_map: 1146 (42S02): Table 'school_db.ss_t_lesson_plan' doesn't exist
+2025-08-16 01:21:13,802 - INFO - Loading table: ss_t_school_income from school_income.xlsx
+2025-08-16 01:21:13,832 - ERROR - Error loading ss_t_school_income: Invalid FK values in 'school_id': {1}
+2025-08-16 01:21:13,833 - INFO - Loading table: ss_t_student_academic_map from student_academic_map.xlsx
+2025-08-16 01:21:13,860 - ERROR - Error loading ss_t_student_academic_map: Invalid FK values in 'student_id': {1, 2}
+2025-08-16 01:21:13,861 - INFO - Loading table: ss_t_student_fee_structure from student_fee_structure.xlsx
+2025-08-16 01:21:13,894 - ERROR - Error loading ss_t_student_fee_structure: 1146 (42S02): Table 'school_db.ss_t_grades' doesn't exist
+2025-08-16 01:21:13,894 - INFO - Loading table: ss_t_teacher_salary_payslip from teacher_salary_payslip.xlsx
+2025-08-16 01:21:13,926 - ERROR - Error loading ss_t_teacher_salary_payslip: Invalid FK values in 'teacher_id': {1}
+2025-08-16 01:21:13,927 - INFO - Loading table: ss_t_teacher_salary_structure from teacher_salary_structure.xlsx
+2025-08-16 01:21:13,951 - ERROR - Error loading ss_t_teacher_salary_structure: Invalid FK values in 'teacher_id': {1, 2}
+2025-08-16 01:21:13,952 - INFO - Loading table: ss_t_teacher_section_map from teacher_section_map.xlsx
+2025-08-16 01:21:13,977 - ERROR - Error loading ss_t_teacher_section_map: Invalid FK values in 'teacher_id': {1, 2}
+2025-08-16 01:21:13,978 - INFO - ETL process completed.
+2025-08-16 01:29:40,641 - INFO - Starting ETL process...
+2025-08-16 01:29:40,642 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-16 01:29:41,267 - INFO - Inserted 2 rows into ss_t_schools
+2025-08-16 01:29:41,268 - INFO - Loading table: ss_t_grades from grades.xlsx
+2025-08-16 01:29:41,303 - INFO - Inserted 2 rows into ss_t_grades
+2025-08-16 01:29:41,304 - INFO - Loading table: ss_t_sections from sections.xlsx
+2025-08-16 01:29:41,339 - INFO - Inserted 2 rows into ss_t_sections
+2025-08-16 01:29:41,340 - INFO - Loading table: ss_t_subjects from subjects.xlsx
+2025-08-16 01:29:41,370 - INFO - Inserted 2 rows into ss_t_subjects
+2025-08-16 01:29:41,370 - INFO - Loading table: ss_t_teachers from teachers.xlsx
+2025-08-16 01:29:41,404 - INFO - Inserted 2 rows into ss_t_teachers
+2025-08-16 01:29:41,404 - INFO - Loading table: ss_t_students from students.xlsx
+2025-08-16 01:29:41,440 - INFO - Inserted 2 rows into ss_t_students
+2025-08-16 01:29:41,442 - INFO - Loading table: ss_t_attendance_type from attendance_type.xlsx
+2025-08-16 01:29:41,467 - INFO - Inserted 3 rows into ss_t_attendance_type
+2025-08-16 01:29:41,467 - INFO - Loading table: ss_t_lesson_plan from lesson_plan.xlsx
+2025-08-16 01:29:41,496 - INFO - Inserted 2 rows into ss_t_lesson_plan
+2025-08-16 01:29:41,497 - INFO - Loading table: ss_t_lesson_plan_topic_map from lesson_plan_topic_map.xlsx
+2025-08-16 01:29:41,521 - INFO - Inserted 2 rows into ss_t_lesson_plan_topic_map
+2025-08-16 01:29:41,522 - INFO - Loading table: ss_t_class_timetable from class_timetable.xlsx
+2025-08-16 01:29:41,560 - ERROR - Error loading ss_t_class_timetable: 1054 (42S22): Unknown column 'nan' in 'field list'
+2025-08-16 01:29:41,561 - INFO - Loading table: ss_t_class_diary from class_diary.xlsx
+2025-08-16 01:29:41,591 - INFO - Inserted 2 rows into ss_t_class_diary
+2025-08-16 01:29:41,592 - INFO - Loading table: ss_t_homework from homework.xlsx
+2025-08-16 01:29:41,630 - INFO - Inserted 2 rows into ss_t_homework
+2025-08-16 01:29:41,631 - INFO - Loading table: ss_t_attendance_register from attendance_register.xlsx
+2025-08-16 01:29:41,650 - ERROR - Error loading ss_t_attendance_register: Invalid FK values in 'student_id': {3}
+2025-08-16 01:29:41,651 - INFO - Loading table: ss_t_fee_payment_installment from fee_payment_installment.xlsx
+2025-08-16 01:29:41,679 - INFO - Inserted 2 rows into ss_t_fee_payment_installment
+2025-08-16 01:29:41,680 - INFO - Loading table: ss_t_school_income from school_income.xlsx
+2025-08-16 01:29:41,711 - INFO - Inserted 2 rows into ss_t_school_income
+2025-08-16 01:29:41,712 - INFO - Loading table: ss_t_student_academic_map from student_academic_map.xlsx
+2025-08-16 01:29:41,739 - INFO - Inserted 2 rows into ss_t_student_academic_map
+2025-08-16 01:29:41,740 - INFO - Loading table: ss_t_student_fee_structure from student_fee_structure.xlsx
+2025-08-16 01:29:41,763 - INFO - Inserted 2 rows into ss_t_student_fee_structure
+2025-08-16 01:29:41,763 - INFO - Loading table: ss_t_teacher_salary_structure from teacher_salary_structure.xlsx
+2025-08-16 01:29:41,788 - INFO - Inserted 2 rows into ss_t_teacher_salary_structure
+2025-08-16 01:29:41,789 - INFO - Loading table: ss_t_teacher_salary_payslip from teacher_salary_payslip.xlsx
+2025-08-16 01:29:41,815 - INFO - Inserted 2 rows into ss_t_teacher_salary_payslip
+2025-08-16 01:29:41,816 - INFO - Loading table: ss_t_teacher_section_map from teacher_section_map.xlsx
+2025-08-16 01:29:41,842 - INFO - Inserted 2 rows into ss_t_teacher_section_map
+2025-08-16 01:29:41,843 - INFO - ETL process completed.
+2025-08-16 01:33:15,053 - INFO - Starting ETL process...
+2025-08-16 01:33:15,054 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-16 01:33:15,743 - INFO - Inserted 2 rows into ss_t_schools
+2025-08-16 01:33:15,744 - INFO - Loading table: ss_t_grades from grades.xlsx
+2025-08-16 01:33:15,773 - INFO - Inserted 2 rows into ss_t_grades
+2025-08-16 01:33:15,774 - INFO - Loading table: ss_t_sections from sections.xlsx
+2025-08-16 01:33:15,799 - INFO - Inserted 2 rows into ss_t_sections
+2025-08-16 01:33:15,800 - INFO - Loading table: ss_t_subjects from subjects.xlsx
+2025-08-16 01:33:15,824 - INFO - Inserted 2 rows into ss_t_subjects
+2025-08-16 01:33:15,825 - INFO - Loading table: ss_t_teachers from teachers.xlsx
+2025-08-16 01:33:15,848 - INFO - Inserted 2 rows into ss_t_teachers
+2025-08-16 01:33:15,849 - INFO - Loading table: ss_t_students from students.xlsx
+2025-08-16 01:33:15,877 - INFO - Inserted 2 rows into ss_t_students
+2025-08-16 01:33:15,878 - INFO - Loading table: ss_t_attendance_type from attendance_type.xlsx
+2025-08-16 01:33:15,902 - INFO - Inserted 3 rows into ss_t_attendance_type
+2025-08-16 01:33:15,903 - INFO - Loading table: ss_t_lesson_plan from lesson_plan.xlsx
+2025-08-16 01:33:15,933 - INFO - Inserted 2 rows into ss_t_lesson_plan
+2025-08-16 01:33:15,934 - INFO - Loading table: ss_t_lesson_plan_topic_map from lesson_plan_topic_map.xlsx
+2025-08-16 01:33:15,958 - INFO - Inserted 2 rows into ss_t_lesson_plan_topic_map
+2025-08-16 01:33:15,958 - INFO - Loading table: ss_t_class_timetable from class_timetable.xlsx
+2025-08-16 01:33:15,989 - ERROR - Error loading ss_t_class_timetable: 1054 (42S22): Unknown column 'nan' in 'field list'
+2025-08-16 01:33:15,990 - INFO - Loading table: ss_t_class_diary from class_diary.xlsx
+2025-08-16 01:33:16,020 - INFO - Inserted 2 rows into ss_t_class_diary
+2025-08-16 01:33:16,021 - INFO - Loading table: ss_t_homework from homework.xlsx
+2025-08-16 01:33:16,051 - INFO - Inserted 2 rows into ss_t_homework
+2025-08-16 01:33:16,052 - INFO - Loading table: ss_t_attendance_register from attendance_register.xlsx
+2025-08-16 01:33:16,077 - INFO - Inserted 2 rows into ss_t_attendance_register
+2025-08-16 01:33:16,078 - INFO - Loading table: ss_t_fee_payment_installment from fee_payment_installment.xlsx
+2025-08-16 01:33:16,102 - INFO - Inserted 2 rows into ss_t_fee_payment_installment
+2025-08-16 01:33:16,102 - INFO - Loading table: ss_t_school_income from school_income.xlsx
+2025-08-16 01:33:16,125 - INFO - Inserted 2 rows into ss_t_school_income
+2025-08-16 01:33:16,126 - INFO - Loading table: ss_t_student_academic_map from student_academic_map.xlsx
+2025-08-16 01:33:16,154 - INFO - Inserted 2 rows into ss_t_student_academic_map
+2025-08-16 01:33:16,155 - INFO - Loading table: ss_t_student_fee_structure from student_fee_structure.xlsx
+2025-08-16 01:33:16,177 - INFO - Inserted 2 rows into ss_t_student_fee_structure
+2025-08-16 01:33:16,177 - INFO - Loading table: ss_t_teacher_salary_structure from teacher_salary_structure.xlsx
+2025-08-16 01:33:16,200 - INFO - Inserted 2 rows into ss_t_teacher_salary_structure
+2025-08-16 01:33:16,201 - INFO - Loading table: ss_t_teacher_salary_payslip from teacher_salary_payslip.xlsx
+2025-08-16 01:33:16,227 - INFO - Inserted 2 rows into ss_t_teacher_salary_payslip
+2025-08-16 01:33:16,228 - INFO - Loading table: ss_t_teacher_section_map from teacher_section_map.xlsx
+2025-08-16 01:33:16,256 - INFO - Inserted 2 rows into ss_t_teacher_section_map
+2025-08-16 01:33:16,257 - INFO - ETL process completed.
+2025-08-16 01:35:19,014 - INFO - Starting ETL process...
+2025-08-16 01:35:19,014 - INFO - Loading table: ss_t_schools from schools.xlsx
+2025-08-16 01:35:19,571 - INFO - Inserted 2 rows into ss_t_schools
+2025-08-16 01:35:19,573 - INFO - Loading table: ss_t_grades from grades.xlsx
+2025-08-16 01:35:19,599 - INFO - Inserted 2 rows into ss_t_grades
+2025-08-16 01:35:19,600 - INFO - Loading table: ss_t_sections from sections.xlsx
+2025-08-16 01:35:19,628 - INFO - Inserted 2 rows into ss_t_sections
+2025-08-16 01:35:19,629 - INFO - Loading table: ss_t_subjects from subjects.xlsx
+2025-08-16 01:35:19,657 - INFO - Inserted 2 rows into ss_t_subjects
+2025-08-16 01:35:19,658 - INFO - Loading table: ss_t_teachers from teachers.xlsx
+2025-08-16 01:35:19,686 - INFO - Inserted 2 rows into ss_t_teachers
+2025-08-16 01:35:19,687 - INFO - Loading table: ss_t_students from students.xlsx
+2025-08-16 01:35:19,716 - INFO - Inserted 2 rows into ss_t_students
+2025-08-16 01:35:19,717 - INFO - Loading table: ss_t_attendance_type from attendance_type.xlsx
+2025-08-16 01:35:19,743 - INFO - Inserted 3 rows into ss_t_attendance_type
+2025-08-16 01:35:19,744 - INFO - Loading table: ss_t_lesson_plan from lesson_plan.xlsx
+2025-08-16 01:35:19,769 - INFO - Inserted 2 rows into ss_t_lesson_plan
+2025-08-16 01:35:19,770 - INFO - Loading table: ss_t_lesson_plan_topic_map from lesson_plan_topic_map.xlsx
+2025-08-16 01:35:19,794 - INFO - Inserted 2 rows into ss_t_lesson_plan_topic_map
+2025-08-16 01:35:19,795 - INFO - Loading table: ss_t_class_timetable from class_timetable.xlsx
+2025-08-16 01:35:19,832 - INFO - Inserted 2 rows into ss_t_class_timetable
+2025-08-16 01:35:19,833 - INFO - Loading table: ss_t_class_diary from class_diary.xlsx
+2025-08-16 01:35:19,865 - INFO - Inserted 2 rows into ss_t_class_diary
+2025-08-16 01:35:19,866 - INFO - Loading table: ss_t_homework from homework.xlsx
+2025-08-16 01:35:19,900 - INFO - Inserted 2 rows into ss_t_homework
+2025-08-16 01:35:19,900 - INFO - Loading table: ss_t_attendance_register from attendance_register.xlsx
+2025-08-16 01:35:19,925 - INFO - Inserted 2 rows into ss_t_attendance_register
+2025-08-16 01:35:19,926 - INFO - Loading table: ss_t_fee_payment_installment from fee_payment_installment.xlsx
+2025-08-16 01:35:19,949 - INFO - Inserted 2 rows into ss_t_fee_payment_installment
+2025-08-16 01:35:19,950 - INFO - Loading table: ss_t_school_income from school_income.xlsx
+2025-08-16 01:35:19,976 - INFO - Inserted 2 rows into ss_t_school_income
+2025-08-16 01:35:19,977 - INFO - Loading table: ss_t_student_academic_map from student_academic_map.xlsx
+2025-08-16 01:35:20,000 - INFO - Inserted 2 rows into ss_t_student_academic_map
+2025-08-16 01:35:20,001 - INFO - Loading table: ss_t_student_fee_structure from student_fee_structure.xlsx
+2025-08-16 01:35:20,024 - INFO - Inserted 2 rows into ss_t_student_fee_structure
+2025-08-16 01:35:20,025 - INFO - Loading table: ss_t_teacher_salary_structure from teacher_salary_structure.xlsx
+2025-08-16 01:35:20,048 - INFO - Inserted 2 rows into ss_t_teacher_salary_structure
+2025-08-16 01:35:20,048 - INFO - Loading table: ss_t_teacher_salary_payslip from teacher_salary_payslip.xlsx
+2025-08-16 01:35:20,076 - INFO - Inserted 2 rows into ss_t_teacher_salary_payslip
+2025-08-16 01:35:20,077 - INFO - Loading table: ss_t_teacher_section_map from teacher_section_map.xlsx
+2025-08-16 01:35:20,102 - INFO - Inserted 2 rows into ss_t_teacher_section_map
+2025-08-16 01:35:20,102 - INFO - ETL process completed.

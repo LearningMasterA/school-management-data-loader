@@ -100,21 +100,196 @@ def load_table(table, excel, columns, required=None, enum_specs=None, fk_specs=N
 # -------------------- TABLE METADATA --------------------
 # Fill this list with your 20 tables
 TABLES = [
+    # 1. Schools
     {
         "table": "ss_t_schools",
         "excel": "schools.xlsx",
         "columns": ["school_name", "school_type", "contact_number", "address"],
         "required": ["school_name"]
     },
+    # 2. Grades
     {
-        "table": "ss_t_grade",
+        "table": "ss_t_grades",
         "excel": "grades.xlsx",
         "columns": ["school_id", "grade_name"],
         "required": ["school_id", "grade_name"],
         "fk_specs": [("school_id", "ss_t_schools", "school_id")]
     },
-    # Add remaining tables here...
+    # 3. Sections
+    {
+        "table": "ss_t_sections",
+        "excel": "sections.xlsx",
+        "columns": ["grade_id", "section_name"],
+        "required": ["grade_id", "section_name"],
+        "fk_specs": [("grade_id", "ss_t_grades", "grade_id")]
+    },
+    # 4. Subjects
+    {
+        "table": "ss_t_subjects",
+        "excel": "subjects.xlsx",
+        "columns": ["school_id", "subject_name"],
+        "required": ["school_id", "subject_name"],
+        "fk_specs": [("school_id", "ss_t_schools", "school_id")]
+    },
+    # 5. Teachers
+    {
+        "table": "ss_t_teachers",
+        "excel": "teachers.xlsx",
+        "columns": ["school_id", "teacher_name", "qualification", "contact_number", "gender"],
+        "required": ["school_id", "teacher_name"],
+        "fk_specs": [("school_id", "ss_t_schools", "school_id")]
+    },
+    # 6. Students
+    {
+        "table": "ss_t_students",
+        "excel": "students.xlsx",
+        "columns": ["school_id", "student_name", "dob", "gender"],
+        "required": ["school_id", "student_name", "dob", "gender"],
+        "fk_specs": [("school_id", "ss_t_schools", "school_id")]
+    },
+    # 7. Attendance Type
+    {
+        "table": "ss_t_attendance_type",
+        "excel": "attendance_type.xlsx",
+        "columns": ["type_name"],
+        "required": ["type_name"]
+    },
+    # 8. Lesson Plan
+    {
+        "table": "ss_t_lesson_plan",
+        "excel": "lesson_plan.xlsx",
+        "columns": ["teacher_id", "subject_id", "plan_date", "description"],
+        "required": ["teacher_id", "subject_id", "plan_date"],
+        "fk_specs": [
+            ("teacher_id", "ss_t_teachers", "teacher_id"),
+            ("subject_id", "ss_t_subjects", "subject_id")
+        ]
+    },
+    # 9. Lesson Plan Topic Map
+    {
+        "table": "ss_t_lesson_plan_topic_map",
+        "excel": "lesson_plan_topic_map.xlsx",
+        "columns": ["lesson_plan_id", "topic_name"],
+        "required": ["lesson_plan_id", "topic_name"],
+        "fk_specs": [("lesson_plan_id", "ss_t_lesson_plan", "lesson_plan_id")]
+    },
+    # 10. Class Timetable
+    {
+        "table": "ss_t_class_timetable",
+        "excel": "class_timetable.xlsx",
+        "columns": ["school_id", "grade_id", "section_id", "subject_id", "teacher_id", "day_of_week", "period_no", "remarks"],
+        "required": ["school_id", "grade_id", "section_id", "day_of_week", "period_no"],
+        "fk_specs": [
+            ("school_id", "ss_t_schools", "school_id"),
+            ("grade_id", "ss_t_grades", "grade_id"),
+            ("section_id", "ss_t_sections", "section_id"),
+            ("subject_id", "ss_t_subjects", "subject_id"),
+            ("teacher_id", "ss_t_teachers", "teacher_id")
+        ]
+    },
+    # 11. Class Diary
+    {
+        "table": "ss_t_class_diary",
+        "excel": "class_diary.xlsx",
+        "columns": ["grade_id", "section_id", "subject_id", "teacher_id", "diary_date", "content"],
+        "required": ["grade_id", "section_id", "subject_id", "teacher_id", "diary_date"],
+        "fk_specs": [
+            ("grade_id", "ss_t_grades", "grade_id"),
+            ("section_id", "ss_t_sections", "section_id"),
+            ("subject_id", "ss_t_subjects", "subject_id"),
+            ("teacher_id", "ss_t_teachers", "teacher_id")
+        ]
+    },
+    # 12. Homework
+    {
+        "table": "ss_t_homework",
+        "excel": "homework.xlsx",
+        "columns": ["school_id", "grade_id", "section_id", "subject_id", "teacher_id", "status", "description"],
+        "required": ["school_id", "grade_id", "section_id", "subject_id", "teacher_id", "status"],
+        "fk_specs": [
+            ("school_id", "ss_t_schools", "school_id"),
+            ("grade_id", "ss_t_grades", "grade_id"),
+            ("section_id", "ss_t_sections", "section_id"),
+            ("subject_id", "ss_t_subjects", "subject_id"),
+            ("teacher_id", "ss_t_teachers", "teacher_id")
+        ]
+    },
+    # 13. Attendance Register
+    {
+        "table": "ss_t_attendance_register",
+        "excel": "attendance_register.xlsx",
+        "columns": ["student_id", "attendance_date", "status"],
+        "required": ["student_id", "attendance_date", "status"],
+        "fk_specs": [("student_id", "ss_t_students", "student_id")]
+    },
+    # 14. Fee Payment Installment
+    {
+        "table": "ss_t_fee_payment_installment",
+        "excel": "fee_payment_installment.xlsx",
+        "columns": ["student_id", "amount_paid", "payment_date"],
+        "required": ["student_id", "amount_paid", "payment_date"],
+        "fk_specs": [("student_id", "ss_t_students", "student_id")]
+    },
+    # 15. School Income
+    {
+        "table": "ss_t_school_income",
+        "excel": "school_income.xlsx",
+        "columns": ["school_id", "source", "amount", "date_received"],
+        "required": ["school_id", "source", "amount", "date_received"],
+        "fk_specs": [("school_id", "ss_t_schools", "school_id")]
+    },
+    # 16. Student Academic Map
+    {
+        "table": "ss_t_student_academic_map",
+        "excel": "student_academic_map.xlsx",
+        "columns": ["student_id", "grade_id", "section_id", "academic_year"],
+        "required": ["student_id", "grade_id", "section_id", "academic_year"],
+        "fk_specs": [
+            ("student_id", "ss_t_students", "student_id"),
+            ("grade_id", "ss_t_grades", "grade_id"),
+            ("section_id", "ss_t_sections", "section_id")
+        ]
+    },
+    # 17. Student Fee Structure
+    {
+        "table": "ss_t_student_fee_structure",
+        "excel": "student_fee_structure.xlsx",
+        "columns": ["grade_id", "amount"],
+        "required": ["grade_id", "amount"],
+        "fk_specs": [("grade_id", "ss_t_grades", "grade_id")]
+    },
+    # 18. Teacher Salary Structure
+    {
+        "table": "ss_t_teacher_salary_structure",
+        "excel": "teacher_salary_structure.xlsx",
+        "columns": ["teacher_id", "basic_pay", "allowances", "deductions"],
+        "required": ["teacher_id", "basic_pay"],
+        "fk_specs": [("teacher_id", "ss_t_teachers", "teacher_id")]
+    },
+    # 19. Teacher Salary Payslip
+    {
+        "table": "ss_t_teacher_salary_payslip",
+        "excel": "teacher_salary_payslip.xlsx",
+        "columns": ["teacher_id", "month", "year", "amount"],
+        "required": ["teacher_id", "month", "year", "amount"],
+        "fk_specs": [("teacher_id", "ss_t_teachers", "teacher_id")]
+    },
+    # 20. Teacher Section Map
+    {
+        "table": "ss_t_teacher_section_map",
+        "excel": "teacher_section_map.xlsx",
+        "columns": ["teacher_id", "grade_id", "section_id", "subject_id"],
+        "required": ["teacher_id", "grade_id", "section_id", "subject_id"],
+        "fk_specs": [
+            ("teacher_id", "ss_t_teachers", "teacher_id"),
+            ("grade_id", "ss_t_grades", "grade_id"),
+            ("section_id", "ss_t_sections", "section_id"),
+            ("subject_id", "ss_t_subjects", "subject_id")
+        ]
+    }
 ]
+
+
 
 # -------------------- MAIN --------------------
 if __name__ == "__main__":
