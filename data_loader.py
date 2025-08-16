@@ -50,6 +50,19 @@ def validate_fk(df, fk_specs, conn):
         invalid_ids = set(df[col].dropna()) - valid_ids
         if invalid_ids:
             raise ValueError(f"Invalid FK values in '{col}': {invalid_ids}")
+        
+        
+        
+        # -------------------- PREPROCESS FUNCTIONS --------------------
+def preprocess_salary_payslip(df):
+    # Convert month names to integers
+    month_map = {
+        "January": 1, "February": 2, "March": 3, "April": 4,
+        "May": 5, "June": 6, "July": 7, "August": 8,
+        "September": 9, "October": 10, "November": 11, "December": 12
+    }
+    df['month'] = df['month'].map(month_map)
+    return df
 
 # -------------------- LOADER --------------------
 def load_table(table, excel, columns, required=None, enum_specs=None, fk_specs=None, preprocess=None):
@@ -276,7 +289,8 @@ TABLES = [
         "excel": "teacher_salary_payslip.xlsx",
         "columns": ["teacher_id", "month", "year", "amount"],
         "required": ["teacher_id", "month", "year", "amount"],
-        "fk_specs": [("teacher_id", "ss_t_teachers", "teacher_id")]
+        "fk_specs": [("teacher_id", "ss_t_teachers", "teacher_id")],
+        "preprocess": preprocess_salary_payslip
     },
     # 20. Teacher Section Map
     {
