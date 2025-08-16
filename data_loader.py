@@ -8,8 +8,8 @@ import os
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "Ankita@261203",  # change this
-    "database": "school_db"       # change this
+    "password": "Ankita@261203",  
+    "database": "school_db"      
 }
 
 EXCEL_DIR = "sample_excels"
@@ -83,7 +83,12 @@ def load_table(table, excel, columns, required=None, enum_specs=None, fk_specs=N
 
         placeholders = ", ".join(["%s"] * len(columns))
         col_names = ", ".join(columns)
-        sql = f"INSERT INTO {table} ({col_names}) VALUES ({placeholders})"
+        update_cols = ", ".join([f"{col}=VALUES({col})" for col in columns if col.lower() != 'id'])
+        sql = f"""
+        INSERT INTO {table} ({col_names})
+        VALUES ({placeholders})
+        ON DUPLICATE KEY UPDATE {update_cols}, updated_at=NOW()
+        """
 
         cursor = conn.cursor()
         cursor.executemany(sql, df.values.tolist())
@@ -98,7 +103,6 @@ def load_table(table, excel, columns, required=None, enum_specs=None, fk_specs=N
         conn.close()
 
 # -------------------- TABLE METADATA --------------------
-# Fill this list with your 20 tables
 TABLES = [
     # 1. Schools
     {
